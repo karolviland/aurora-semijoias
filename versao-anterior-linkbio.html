@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurora Semijoias — Brilho que combina com você</title>
+<meta name="description" content="Semijoias folheadas a ouro 18k com garantia. Colares, brincos, anéis, pulseiras e conjuntos. Peça pelo WhatsApp e receba em todo o Brasil.">
+<meta name="theme-color" content="#1b1512">
+
+<!-- Compartilhamento (troque a URL da imagem quando publicar) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Aurora Semijoias">
+<meta property="og:description" content="Brilho que combina com você. Semijoias folheadas a ouro 18k com garantia.">
+<meta property="og:image" content="assets/og.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   AURORA SEMIJOIAS — página única (link na bio / cartão digital)
+   Para personalizar rápido: veja o bloco CONFIG no final do arquivo.
+   ============================================================ */
+
+:root{
+  --ink:#1b1512;
+  --ink-soft:#5b5048;
+  --bg:#faf6f0;
+  --card:#ffffff;
+  --line:#ece2d5;
+  --gold:#b8912f;
+  --gold-soft:#e6d3a3;
+  --gold-glow:rgba(184,145,47,.14);
+  --radius:18px;
+  --shadow:0 1px 2px rgba(27,21,18,.04), 0 10px 30px rgba(27,21,18,.06);
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --sans:"Jost", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans);
+  font-weight:400;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer}
+
+.wrap{width:100%;max-width:520px;margin:0 auto;padding-inline:20px}
+
+/* ---------- topo / capa ---------- */
+.cover{
+  position:relative;
+  padding-block:56px 0;
+  text-align:center;
+  overflow:hidden;
+}
+.cover::before{
+  content:"";
+  position:absolute;inset:-40% -30% auto -30%;
+  height:520px;
+  background:
+    radial-gradient(60% 60% at 50% 0%, rgba(230,211,163,.55), transparent 70%),
+    radial-gradient(45% 45% at 20% 20%, rgba(184,145,47,.18), transparent 70%);
+  pointer-events:none;
+}
+.cover > *{position:relative}
+
+.logo{
+  width:112px;height:112px;margin:0 auto 22px;
+  border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(150deg,#fdf8ee,#f0e2c4 45%,#d8bd7d);
+  box-shadow:0 0 0 1px rgba(184,145,47,.35), 0 0 0 8px #fff, var(--shadow);
+  overflow:hidden;
+}
+/* Trocar pelo logo real: <img src="assets/logo.png" alt="Aurora Semijoias"> dentro de .logo */
+.logo .monogram{
+  font-family:var(--serif);
+  font-size:52px;line-height:1;
+  color:#8c6d1f;
+  letter-spacing:.02em;
+  padding-bottom:6px;
+}
+
+h1{
+  font-family:var(--serif);
+  font-weight:500;
+  font-size:clamp(34px,9vw,44px);
+  line-height:1.1;
+  margin:0 0 6px;
+  letter-spacing:.01em;
+}
+.tagline{
+  font-size:14px;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--gold);
+  font-weight:500;
+  margin:0 0 20px;
+}
+.about{
+  font-size:15.5px;
+  color:var(--ink-soft);
+  margin:0 auto;
+  max-width:42ch;
+}
+
+/* ---------- selos ---------- */
+.badges{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:8px;
+  margin-top:22px;
+}
+.badge{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:12px;letter-spacing:.04em;
+  padding:7px 13px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  color:var(--ink-soft);
+  white-space:nowrap;
+}
+.badge svg{width:13px;height:13px;color:var(--gold);flex:none}
+
+/* ---------- botões principais ---------- */
+.links{margin-top:34px;display:grid;gap:11px}
+
+.link{
+  display:flex;align-items:center;gap:14px;
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:15px 16px;
+  box-shadow:var(--shadow);
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  text-align:left;
+  width:100%;
+}
+.link:hover{
+  transform:translateY(-2px);
+  border-color:var(--gold-soft);
+  box-shadow:0 1px 2px rgba(27,21,18,.04), 0 16px 34px rgba(27,21,18,.1);
+}
+.link:active{transform:translateY(0)}
+.link .ic{
+  width:42px;height:42px;flex:none;
+  border-radius:12px;
+  display:grid;place-items:center;
+  background:linear-gradient(150deg,#fdf9f1,#f3e8d1);
+  color:#9a7a22;
+}
+.link .ic svg{width:19px;height:19px}
+.link .txt{flex:1;min-width:0}
+.link .txt b{display:block;font-weight:500;font-size:15.5px;letter-spacing:.01em}
+.link .txt span{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:1px}
+.link .arrow{color:#c9bdae;flex:none;transition:transform .18s ease,color .18s ease}
+.link:hover .arrow{transform:translateX(3px);color:var(--gold)}
+
+.link.primary{
+  background:linear-gradient(140deg,#231b16,#3a2c20);
+  border-color:#231b16;
+  color:#fdf8ee;
+}
+.link.primary .ic{background:rgba(230,211,163,.16);color:var(--gold-soft)}
+.link.primary .txt span{color:rgba(253,248,238,.6)}
+.link.primary .arrow{color:rgba(253,248,238,.5)}
+.link.primary:hover{border-color:#3a2c20}
+
+/* ---------- seções ---------- */
+.section{margin-top:52px}
+.section-head{text-align:center;margin-bottom:20px}
+.eyebrow{
+  font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--gold);font-weight:500;margin:0 0 6px;
+}
+.section-head h2{
+  font-family:var(--serif);font-weight:500;
+  font-size:28px;line-height:1.2;margin:0;
+}
+
+/* ---------- coleções ---------- */
+.shelf{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:11px;
+}
+.item{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:transform .18s ease, box-shadow .18s ease;
+  display:block;
+}
+.item:hover{transform:translateY(-3px);box-shadow:0 16px 34px rgba(27,21,18,.1)}
+.item .ph{
+  aspect-ratio:1/1;
+  display:grid;place-items:center;
+  background:linear-gradient(155deg,#f7efe0,#efe1c7 60%,#e4d0a6);
+  color:#a9862c;
+  position:relative;
+}
+/* Trocar pela foto real: <img src="assets/colares.jpg" alt="Colares"> no lugar da div .ph */
+.item .ph svg{width:46px;height:46px;opacity:.75}
+.item .ph::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(115deg,transparent 40%,rgba(255,255,255,.55) 50%,transparent 60%);
+  transform:translateX(-100%);
+}
+.item:hover .ph::after{animation:shine .9s ease}
+@keyframes shine{to{transform:translateX(100%)}}
+.item .info{padding:12px 13px 14px}
+.item .info b{display:block;font-weight:500;font-size:15px}
+.item .info span{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:2px}
+
+/* ---------- depoimentos ---------- */
+.reviews{display:grid;gap:11px}
+.review{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  padding:17px 18px;
+  box-shadow:var(--shadow);
+}
+.stars{color:var(--gold);letter-spacing:.12em;font-size:13px;margin-bottom:7px}
+.review p{margin:0 0 10px;font-size:14.5px;color:#3e352e;font-style:italic}
+.review cite{
+  font-style:normal;font-size:12.5px;color:var(--ink-soft);
+  letter-spacing:.04em;
+}
+
+/* ---------- faq ---------- */
+.faq{display:grid;gap:9px}
+.q{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  overflow:hidden;
+}
+.q summary{
+  list-style:none;cursor:pointer;
+  padding:14px 16px;
+  font-size:14.5px;font-weight:500;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.q summary::-webkit-details-marker{display:none}
+.q summary::after{
+  content:"+";color:var(--gold);font-size:19px;line-height:1;flex:none;
+  transition:transform .2s ease;
+}
+.q[open] summary::after{transform:rotate(45deg)}
+.q .a{padding:0 16px 15px;font-size:14px;color:var(--ink-soft);margin:0}
+
+/* ---------- cta final ---------- */
+.cta{
+  margin-top:52px;
+  background:linear-gradient(140deg,#231b16,#3d2e21);
+  border-radius:24px;
+  padding:34px 24px;
+  text-align:center;
+  color:#fdf8ee;
+  position:relative;overflow:hidden;
+}
+.cta::before{
+  content:"";position:absolute;inset:auto -20% -60% -20%;height:220px;
+  background:radial-gradient(50% 60% at 50% 100%, rgba(230,211,163,.22), transparent 70%);
+}
+.cta > *{position:relative}
+.cta h2{
+  font-family:var(--serif);font-weight:500;
+  font-size:29px;line-height:1.2;margin:0 0 8px;
+}
+.cta p{margin:0 0 20px;font-size:14.5px;color:rgba(253,248,238,.68)}
+.btn-wa{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  background:#25D366;color:#0b2e18;
+  font-weight:500;font-size:15.5px;letter-spacing:.01em;
+  padding:15px 28px;border-radius:999px;
+  box-shadow:0 10px 26px rgba(37,211,102,.28);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 34px rgba(37,211,102,.36)}
+.btn-wa svg{width:19px;height:19px}
+
+/* ---------- rodapé ---------- */
+footer{
+  text-align:center;
+  padding:34px 20px 110px;
+  font-size:12.5px;color:#9a8f83;
+}
+.social{display:flex;justify-content:center;gap:10px;margin-bottom:16px}
+.social a{
+  width:38px;height:38px;border-radius:50%;
+  border:1px solid var(--line);background:#fff;
+  display:grid;place-items:center;color:var(--ink-soft);
+  transition:color .18s ease,border-color .18s ease,transform .18s ease;
+}
+.social a:hover{color:var(--gold);border-color:var(--gold-soft);transform:translateY(-2px)}
+.social svg{width:17px;height:17px}
+footer .brand{font-family:var(--serif);font-size:17px;color:var(--ink);margin-bottom:4px}
+
+/* ---------- botão flutuante ---------- */
+.float{
+  position:fixed;left:50%;transform:translateX(-50%);
+  bottom:18px;z-index:40;
+  width:calc(100% - 40px);max-width:480px;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  background:#25D366;color:#0b2e18;
+  font-weight:500;font-size:15.5px;
+  padding:15px 22px;border-radius:999px;
+  box-shadow:0 10px 30px rgba(11,46,24,.25);
+  opacity:0;pointer-events:none;
+  transition:opacity .3s ease, transform .3s ease;
+}
+.float.on{opacity:1;pointer-events:auto}
+.float svg{width:19px;height:19px}
+
+/* ---------- modal pix ---------- */
+.modal{
+  position:fixed;inset:0;z-index:60;
+  background:rgba(27,21,18,.55);
+  backdrop-filter:blur(3px);
+  display:grid;place-items:end center;
+  opacity:0;pointer-events:none;transition:opacity .25s ease;
+}
+.modal.on{opacity:1;pointer-events:auto}
+.sheet{
+  width:100%;max-width:520px;
+  background:var(--bg);
+  border-radius:24px 24px 0 0;
+  padding:26px 22px 32px;
+  text-align:center;
+  transform:translateY(20px);
+  transition:transform .25s ease;
+}
+.modal.on .sheet{transform:translateY(0)}
+.sheet h3{font-family:var(--serif);font-weight:500;font-size:25px;margin:0 0 4px}
+.sheet p{font-size:14px;color:var(--ink-soft);margin:0 0 18px}
+.pix-key{
+  display:flex;align-items:center;gap:10px;
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:14px 15px;margin-bottom:12px;text-align:left;
+}
+.pix-key span{flex:1;min-width:0;font-size:14px;word-break:break-all}
+.pix-key small{display:block;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin-bottom:2px}
+.copy{
+  background:var(--ink);color:#fdf8ee;
+  border-radius:10px;padding:9px 14px;font-size:13px;flex:none;
+}
+.close{font-size:13.5px;color:var(--ink-soft);padding:10px;margin-top:4px}
+
+/* ---------- animação de entrada ---------- */
+.reveal{opacity:0;transform:translateY(14px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .6s ease, transform .6s ease}
+@media (prefers-reduced-motion:reduce){
+  .reveal,.reveal.in{opacity:1;transform:none;transition:none}
+  *{animation:none!important}
+}
+
+@media (min-width:560px){
+  .shelf{gap:13px}
+  .cover{padding-block:68px 0}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ CAPA ============ -->
+<header class="cover">
+  <div class="wrap">
+    <div class="logo">
+      <!-- Troque por: <img src="assets/logo.png" alt="Aurora Semijoias"> -->
+      <div class="monogram">A</div>
+    </div>
+
+    <h1 data-brand>Aurora Semijoias</h1>
+    <p class="tagline" data-tagline>Brilho que combina com você</p>
+
+    <p class="about">
+      Peças folheadas a ouro 18k escolhidas uma a uma, com acabamento
+      impecável e garantia real. Do presente especial ao brilho do dia a dia —
+      atendimento próximo, do primeiro "oi" à entrega na sua porta.
+    </p>
+
+    <div class="badges">
+      <span class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg>
+        Garantia de 1 ano
+      </span>
+      <span class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 .9-4.5 4.3 1.1 6.3L12 16.5 6.4 19.5l1.1-6.3L3 8.9 9 8z"/></svg>
+        Banho de ouro 18k
+      </span>
+      <span class="badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 7h11v8H3z"/><path d="M14 10h4l3 3v2h-7z"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+        Enviamos para todo o Brasil
+      </span>
+    </div>
+
+    <!-- ============ BOTÕES ============ -->
+    <nav class="links">
+      <a class="link primary" data-wa href="#">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3.1-1.3-5.1-4.4-5.3-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5l1 2.4c.1.2.1.4 0 .6l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2.2 1.1c.2.1.4.2.5.3.1.1.1.6-.1 1.3z"/></svg>
+        </span>
+        <span class="txt">
+          <b>Fazer meu pedido no WhatsApp</b>
+          <span>Resposta rápida, de segunda a sábado</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="link" href="#colecoes">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3h12l3 5-9 13L3 8z"/><path d="M3 8h18M9 3L6.5 8 12 21l5.5-13L15 3"/></svg>
+        </span>
+        <span class="txt">
+          <b>Catálogo completo</b>
+          <span>Colares, brincos, anéis, pulseiras e conjuntos</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="link" data-ig href="#" target="_blank" rel="noopener">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+        </span>
+        <span class="txt">
+          <b>Instagram</b>
+          <span>Novidades e peças usadas no dia a dia</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="link" data-maps href="#" target="_blank" rel="noopener">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+        </span>
+        <span class="txt">
+          <b>Onde nos encontrar</b>
+          <span>Atendimento com hora marcada</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+      <button class="link" id="btn-pix">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 5l4-2 4 2M5 8L3 12l2 4M19 8l2 4-2 4M8 19l4 2 4-2"/><rect x="8" y="8" width="8" height="8" rx="2" transform="rotate(45 12 12)"/></svg>
+        </span>
+        <span class="txt">
+          <b>Pagar com Pix</b>
+          <span>Toque para copiar a chave</span>
+        </span>
+        <span class="arrow">→</span>
+      </button>
+
+      <a class="link" href="#depoimentos">
+        <span class="ic">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3l2.6 5.6 6.1.8-4.4 4.3 1.1 6.1L12 17l-5.4 2.8 1.1-6.1L3.3 9.4l6.1-.8z"/></svg>
+        </span>
+        <span class="txt">
+          <b>Depoimentos</b>
+          <span>O que nossas clientes dizem</span>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <!-- ============ COLEÇÕES ============ -->
+  <section class="section wrap reveal" id="colecoes">
+    <div class="section-head">
+      <p class="eyebrow">Coleções</p>
+      <h2>Escolha o seu brilho</h2>
+    </div>
+
+    <div class="shelf">
+      <!-- Cada item: troque a div .ph por <img src="assets/colares.jpg" alt="Colares"> -->
+      <a class="item" data-wa-item="Colares">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M5 4c0 6 3 9 7 9s7-3 7-9"/><path d="M12 13l2 3-2 3-2-3z"/></svg></div>
+        <div class="info"><b>Colares</b><span>a partir de R$ 79</span></div>
+      </a>
+
+      <a class="item" data-wa-item="Brincos">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 4a3 3 0 116 0v3"/><circle cx="8" cy="14" r="4"/><path d="M16 9v4a3 3 0 11-3 3"/></svg></div>
+        <div class="info"><b>Brincos</b><span>a partir de R$ 49</span></div>
+      </a>
+
+      <a class="item" data-wa-item="Anéis">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="14" r="6"/><path d="M9 6h6l-3 3z"/></svg></div>
+        <div class="info"><b>Anéis</b><span>a partir de R$ 59</span></div>
+      </a>
+
+      <a class="item" data-wa-item="Pulseiras">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><ellipse cx="12" cy="12" rx="8" ry="6"/><circle cx="12" cy="6" r="1.6"/></svg></div>
+        <div class="info"><b>Pulseiras</b><span>a partir de R$ 69</span></div>
+      </a>
+
+      <a class="item" data-wa-item="Conjuntos">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 9l4-4 4 4-4 4z"/><path d="M13 15l3.5-3.5L20 15l-3.5 3.5z"/></svg></div>
+        <div class="info"><b>Conjuntos</b><span>a partir de R$ 119</span></div>
+      </a>
+
+      <a class="item" data-wa-item="Linha masculina">
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 12h5M15 12h5"/><circle cx="12" cy="12" r="3"/><path d="M6 9v6M18 9v6"/></svg></div>
+        <div class="info"><b>Masculino</b><span>a partir de R$ 89</span></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ DEPOIMENTOS ============ -->
+  <section class="section wrap reveal" id="depoimentos">
+    <div class="section-head">
+      <p class="eyebrow">Depoimentos</p>
+      <h2>Quem usa, recomenda</h2>
+    </div>
+
+    <div class="reviews">
+      <blockquote class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Comprei um conjunto para o casamento da minha irmã e chegou antes do prazo, embalado lindo. Já é a terceira vez que compro.”</p>
+        <cite>— Camila R.</cite>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Uso o colar todos os dias há mais de um ano, tomo banho com ele e não escureceu. Qualidade de verdade.”</p>
+        <cite>— Juliana M.</cite>
+      </blockquote>
+      <blockquote class="review">
+        <div class="stars">★★★★★</div>
+        <p>“Atendimento impecável. Me ajudaram a escolher o presente pelo WhatsApp e ainda mandaram cartãozinho.”</p>
+        <cite>— Patrícia L.</cite>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section wrap reveal">
+    <div class="section-head">
+      <p class="eyebrow">Dúvidas</p>
+      <h2>Perguntas frequentes</h2>
+    </div>
+
+    <div class="faq">
+      <details class="q">
+        <summary>As peças escurecem?</summary>
+        <p class="a">Nossas semijoias têm banho de ouro 18k com camada reforçada e garantia de 1 ano contra escurecimento e descascamento, seguindo os cuidados de uso.</p>
+      </details>
+      <details class="q">
+        <summary>Como faço para comprar?</summary>
+        <p class="a">É só chamar no WhatsApp. Enviamos fotos e vídeos reais das peças disponíveis, fechamos o pedido e você paga por Pix, cartão (em até 6x) ou na entrega.</p>
+      </details>
+      <details class="q">
+        <summary>Qual o prazo de entrega?</summary>
+        <p class="a">Entregas locais em até 24h. Para o restante do Brasil, o envio sai em 1 dia útil e o prazo dos Correios varia de 3 a 10 dias, com código de rastreio.</p>
+      </details>
+      <details class="q">
+        <summary>Posso trocar se não servir?</summary>
+        <p class="a">Sim. Você tem 7 dias para solicitar a troca ou devolução após receber, com a peça sem uso e na embalagem original.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="wrap">
+    <div class="cta reveal">
+      <h2>Pronta para brilhar?</h2>
+      <p>Me conta o que você procura que eu monto uma seleção só para você.</p>
+      <a class="btn-wa" data-wa href="#">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3.1-1.3-5.1-4.4-5.3-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5l1 2.4c.1.2.1.4 0 .6l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2.2 1.1c.2.1.4.2.5.3.1.1.1.6-.1 1.3z"/></svg>
+        Chamar no WhatsApp
+      </a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <a data-ig href="#" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+    </a>
+    <a data-wa href="#" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3.1-1.3-5.1-4.4-5.3-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5l1 2.4c.1.2.1.4 0 .6l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2.2 1.1c.2.1.4.2.5.3.1.1.1.6-.1 1.3z"/></svg>
+    </a>
+    <a data-maps href="#" target="_blank" rel="noopener" aria-label="Localização">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-5.5 7-11a7 7 0 10-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+    </a>
+  </div>
+  <div class="brand" data-brand>Aurora Semijoias</div>
+  <div>CNPJ 00.000.000/0001-00 · Todos os direitos reservados</div>
+</footer>
+
+<!-- botão flutuante -->
+<a class="float" data-wa href="#" id="float">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3.1-1.3-5.1-4.4-5.3-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .5-.1.7.5l1 2.4c.1.2.1.4 0 .6l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.2.4-.2.6-.1l2.2 1.1c.2.1.4.2.5.3.1.1.1.6-.1 1.3z"/></svg>
+  Fazer meu pedido
+</a>
+
+<!-- modal pix -->
+<div class="modal" id="modal-pix">
+  <div class="sheet">
+    <h3>Pagamento via Pix</h3>
+    <p>Copie a chave abaixo e envie o comprovante no WhatsApp.</p>
+    <div class="pix-key">
+      <span><small>Chave Pix</small><b id="pix-value"></b></span>
+      <button class="copy" id="btn-copy">Copiar</button>
+    </div>
+    <button class="close" id="btn-close">Fechar</button>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG — altere só este bloco para personalizar o site
+   ============================================================ */
+const CONFIG = {
+  marca:     "Aurora Semijoias",
+  slogan:    "Brilho que combina com você",
+
+  // Telefone com DDI + DDD, só números. Ex.: 5549999999999
+  whatsapp:  "5549999999999",
+  mensagem:  "Olá! Vim pelo site e gostaria de ver as peças disponíveis 💛",
+
+  instagram: "https://instagram.com/aurorasemijoias",
+  maps:      "https://maps.google.com/?q=Aurora+Semijoias",
+
+  pix:       "contato@aurorasemijoias.com.br"
+};
+/* ========================================================== */
+
+// aplica a configuração na página
+document.title = CONFIG.marca + " — " + CONFIG.slogan;
+document.querySelectorAll("[data-brand]").forEach(e => e.textContent = CONFIG.marca);
+document.querySelectorAll("[data-tagline]").forEach(e => e.textContent = CONFIG.slogan);
+
+const waLink = (texto) =>
+  "https://wa.me/" + CONFIG.whatsapp + "?text=" + encodeURIComponent(texto || CONFIG.mensagem);
+
+document.querySelectorAll("[data-wa]").forEach(a => {
+  a.href = waLink();
+  a.target = "_blank";
+  a.rel = "noopener";
+});
+document.querySelectorAll("[data-ig]").forEach(a => a.href = CONFIG.instagram);
+document.querySelectorAll("[data-maps]").forEach(a => a.href = CONFIG.maps);
+
+// cada coleção abre o WhatsApp já com a categoria escrita
+document.querySelectorAll("[data-wa-item]").forEach(a => {
+  const nome = a.dataset.waItem;
+  a.href = waLink("Olá! Gostaria de ver as opções de " + nome + " disponíveis 💛");
+  a.target = "_blank";
+  a.rel = "noopener";
+});
+
+// modal do Pix
+const modal = document.getElementById("modal-pix");
+document.getElementById("pix-value").textContent = CONFIG.pix;
+const abrir  = () => modal.classList.add("on");
+const fechar = () => modal.classList.remove("on");
+document.getElementById("btn-pix").addEventListener("click", abrir);
+document.getElementById("btn-close").addEventListener("click", fechar);
+modal.addEventListener("click", e => { if (e.target === modal) fechar(); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") fechar(); });
+
+document.getElementById("btn-copy").addEventListener("click", async function () {
+  try {
+    await navigator.clipboard.writeText(CONFIG.pix);
+  } catch (err) {
+    const t = document.createElement("textarea");
+    t.value = CONFIG.pix;
+    document.body.appendChild(t); t.select();
+    document.execCommand("copy");
+    t.remove();
+  }
+  this.textContent = "Copiado!";
+  setTimeout(() => { this.textContent = "Copiar"; }, 1800);
+});
+
+// botão flutuante aparece depois da primeira dobra
+const float = document.getElementById("float");
+const alvo  = document.getElementById("colecoes");
+new IntersectionObserver(
+  ([e]) => float.classList.toggle("on", e.boundingClientRect.top < 0 || e.isIntersecting),
+  { threshold: 0 }
+).observe(alvo);
+
+// animação de entrada das seções
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); }
+  });
+}, { threshold: .12 });
+document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
