@@ -5,7 +5,8 @@ const CatalogNavigation={start({products,render,close}){
  const chips=document.getElementById('filtros-cat');
  function paint(){
   if(!catalog)return;
-  const list=C.filter(selected,products);
+  // A mesma marca que exibe NEW, antes da paginação; preserva a ordem de cada grupo.
+  const list=C.filter(selected,products).sort((a,b)=>Number(Boolean(b.catalogoNovo))-Number(Boolean(a.catalogoNovo)));
   document.getElementById('catalog-section').textContent=C.sections[selected.section].label;
   document.getElementById('catalog-title').textContent=selected.model==='Todas'?'Todas as peças':selected.model;
   document.title=C.sections[selected.section].label+' — '+(selected.model==='Todas'?'Todas as peças':selected.model)+' | '+CONFIG.nomeCompleto;
