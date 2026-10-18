@@ -2988,18 +2988,20 @@ const PRODUTOS = [
     "adicionadoCatalogo1610": true
   },
   {
-    "de": 0,
-    "tag": "",
-    "vitrine": "",
-    "id": "95123",
-    "nome": "Corrente Prata 925",
-    "cat": "Correntes",
-    "mat": "Prata 925",
-    "preco": 212.8,
-    "imagem": "assets/produtos/catalogo-1610/95123.png?v=1610",
-    "catalogoNovo": true,
-    "adicionadoCatalogo1610": true
-  },
+  "de": 0,
+  "tag": "",
+  "vitrine": "para-eles",
+  "id": "95123",
+  "nome": "Corrente masculina Prata 925",
+  "cat": "Correntes",
+  "mat": "Prata 925",
+  "preco": 212.8,
+  "imagem": "assets/produtos/catalogo-1610/95123.png?v=1610",
+  "catalogoNovo": true,
+  "adicionadoCatalogo1610": true,
+  "publico": "para-eles",
+  "secao": "para-eles"
+},
   {
     "de": 0,
     "tag": "",
