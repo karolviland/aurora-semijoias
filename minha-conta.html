@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Minha conta | H Maria por Karol</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--wine:#101010;--ink:#101010;--muted:#57544e;--line:#f3f0e9}*{box-sizing:border-box}body{margin:0;background:#fdfcf8;color:var(--ink);font-family:Jost,Arial,sans-serif;font-size:15px}a{color:inherit;text-decoration:none}button,input{font:inherit}button,a,input{ -webkit-tap-highlight-color:transparent}header{border-bottom:1px solid var(--line);padding:24px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:32px;font-weight:600;text-align:center;line-height:1}.logo small{display:block;font-family:Jost,Arial,sans-serif;font-size:9px;letter-spacing:.3em;text-transform:uppercase;margin-top:8px}header>a:last-child{font-size:13px;color:var(--muted)}main{max-width:1180px;margin:0 auto;padding:32px 22px 80px}.breadcrumbs{display:flex;gap:9px;flex-wrap:wrap;font-size:13px;color:var(--muted);margin-bottom:28px}.breadcrumbs span:last-child{color:var(--wine)}.account{max-width:592px}h1{font-size:26px;font-weight:400;margin:0 0 26px}label{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px}.field{margin-bottom:23px}input{width:100%;height:46px;border:1px solid #b5aaa0;background:#fff;padding:10px 13px;border-radius:0;color:var(--ink)}input:focus{outline:2px solid var(--wine);outline-offset:2px}.password{position:relative}.password input{padding-right:52px}.reveal{position:absolute;right:1px;top:1px;width:44px;height:44px;border:0;background:transparent;color:var(--muted);cursor:pointer}.reveal svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.4}.forgot{display:block;text-align:right;font-size:13px;color:var(--muted);margin-top:-12px;margin-bottom:28px}.submit{width:100%;min-height:48px;border:0;background:var(--wine);color:#fff;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;padding:14px 18px}.submit:hover{background:#101010}.switch{text-align:center;margin-top:22px;font-size:15px}.switch a{color:var(--muted);text-decoration:underline;text-underline-offset:4px}.intro{color:var(--muted);margin:-12px 0 26px;line-height:1.6}.notice{margin:24px 0 0;padding:14px 16px;border:1px solid var(--line);font-size:13px;line-height:1.6;color:var(--muted);background:#f3f0e9}.notice strong{color:var(--wine);font-weight:500}.message{line-height:1.6;color:var(--wine);margin:16px 0 0}.privacy{font-size:13px;line-height:1.6;color:var(--muted);margin:0 0 22px}:focus-visible{outline:2px solid var(--wine);outline-offset:3px}[hidden]{display:none!important}@media(max-width:600px){header{padding:18px 20px}.logo{font-size:27px}main{padding:25px 20px 60px}.breadcrumbs{margin-bottom:24px}h1{font-size:25px}}
+</style><style id="brand-monogram-logo">
+.logo.brand-logo{display:block;width:260px;max-width:100%;min-width:0;line-height:0;justify-self:center}
+.logo.brand-logo img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain}
+@media(max-width:900px){.logo.brand-logo{width:180px}}
+@media(max-width:560px){.logo.brand-logo{width:150px}}
+</style><link rel="stylesheet" href="palette.css">
+</head>
+<body>
+<header><a class="logo neutral-wordmark" href="index.html" aria-label="H Maria por Karol — início">H MARIA<small>POR KAROL</small></a><a href="index.html">Voltar à loja →</a></header>
+<main><nav class="breadcrumbs" aria-label="Localização"><a href="index.html">Início</a><span aria-hidden="true">·</span><a href="minha-conta.html">Minha conta</a><span aria-hidden="true">·</span><span id="crumb" aria-current="page">Login</span></nav>
+<div class="account">
+<section id="login"><h1>Iniciar sessão</h1>
+<form data-action="login"><div class="field"><label for="login-email">E-mail</label><input id="login-email" type="email" name="email" autocomplete="username" required maxlength="254"></div>
+<div class="field"><label for="login-password">Senha</label><div class="password"><input id="login-password" type="password" name="password" autocomplete="current-password" required><button class="reveal" type="button" aria-label="Mostrar senha" aria-controls="login-password" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div></div>
+<a class="forgot" href="#recuperar">Esqueceu a senha?</a><button class="submit" type="submit">Iniciar sessão</button></form>
+<p class="switch">Não possui uma conta ainda? <a href="#cadastro">Criar uma conta</a></p></section>
+<section id="cadastro" hidden><h1>Criar uma conta</h1><p class="intro">Cadastre-se para ter sua conta na H Maria.</p>
+<form data-action="signup"><div class="field"><label for="signup-name">Nome completo</label><input id="signup-name" name="name" autocomplete="name" required minlength="2" maxlength="120"></div>
+<div class="field"><label for="signup-email">E-mail</label><input id="signup-email" type="email" name="email" autocomplete="username" required maxlength="254"></div>
+<div class="field"><label for="signup-password">Senha (mínimo de 8 caracteres)</label><div class="password"><input id="signup-password" type="password" name="password" autocomplete="new-password" required minlength="8"><button class="reveal" type="button" aria-label="Mostrar senha" aria-controls="signup-password" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div></div>
+<div class="field"><label for="signup-confirm">Confirmar senha</label><input id="signup-confirm" type="password" name="confirm" autocomplete="new-password" required minlength="8"></div>
+<button class="submit" type="submit">Criar conta</button></form><p class="switch">Já tem uma conta? <a href="#login">Iniciar sessão</a></p></section>
+<section id="recuperar" hidden><h1>Recuperar senha</h1><p class="intro">Informe o e-mail usado no seu cadastro.</p><form data-action="recover"><div class="field"><label for="recover-email">E-mail</label><input id="recover-email" type="email" name="email" autocomplete="email" required maxlength="254"></div><button class="submit" type="submit">Enviar link de recuperação</button></form><p class="switch"><a href="#login">Voltar para iniciar sessão</a></p></section>
+<p class="message" id="message" role="status" aria-live="polite" hidden></p>
+<p class="notice"><strong>Cadastro em preparação.</strong> Estamos configurando o serviço de contas. Por enquanto, os formulários desta prévia não enviam nem salvam seus dados.</p>
+</div></main>
+<script src="config.js"></script>
+<script>
+const names={login:'Login',cadastro:'Criar conta',recuperar:'Recuperar senha'};
+const message=document.getElementById('message');
+function view(){const requested=location.hash.slice(1);const active=Object.hasOwn(names,requested)?requested:'login';Object.keys(names).forEach(id=>document.getElementById(id).hidden=id!==active);document.getElementById('crumb').textContent=names[active];message.hidden=true;document.title=names[active]+' | '+CONFIG.nomeCompleto;}
+window.addEventListener('hashchange',view);view();
+document.querySelectorAll('[data-brand]').forEach(el=>{el.replaceChildren(document.createTextNode(CONFIG.marca));const small=document.createElement('small');small.textContent=CONFIG.marcaSub;el.append(small);});
+document.querySelectorAll('.reveal').forEach(button=>button.addEventListener('click',()=>{const input=document.getElementById(button.getAttribute('aria-controls'));const show=input.type==='password';input.type=show?'text':'password';button.setAttribute('aria-pressed',String(show));button.setAttribute('aria-label',show?'Ocultar senha':'Mostrar senha');}));
+const password=document.getElementById('signup-password'),confirmPassword=document.getElementById('signup-confirm');
+function validatePasswords(){confirmPassword.setCustomValidity(confirmPassword.value&&confirmPassword.value!==password.value?'As senhas precisam ser iguais.':'');}
+password.addEventListener('input',validatePasswords);confirmPassword.addEventListener('input',validatePasswords);
+document.querySelectorAll('form').forEach(form=>form.addEventListener('submit',event=>{event.preventDefault();message.textContent='O serviço de contas ainda está sendo configurado. Nenhum dado foi enviado ou salvo.';message.hidden=false;form.querySelectorAll('input[type="password"],.password input').forEach(input=>input.value='');validatePasswords();}));
+</script></body></html>

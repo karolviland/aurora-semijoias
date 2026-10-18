@@ -1,0 +1,44 @@
+
+/* Paleta H Maria: superfícies claras, contraste Obsidian. */
+:root{
+ --off-white:#FDFCF8;--ivory:#F3F0E9;--nude:#E3DBCC;--obsidian:#101010;
+ --vanilla:var(--off-white);--oat:var(--ivory);--greige:var(--nude);--cherry:var(--obsidian);--noir:var(--obsidian);
+ --bg:var(--off-white);--bg-2:var(--ivory);--bg-3:var(--nude);--card:var(--ivory);
+ --ink:var(--obsidian);--ink-2:#45433f;--ink-3:#57544e;--muted:#57544e;--on-dark:var(--off-white);
+ --line:var(--nude);--line-2:var(--nude);--wine:var(--obsidian);--wine-2:var(--nude);
+ --rose:var(--nude);--rose-soft:var(--nude);--sand:var(--ivory);--burgundy:var(--obsidian);--mauve:var(--obsidian);
+ --photo:var(--ivory);--wa:var(--obsidian);color-scheme:light;
+}
+body{background:var(--off-white)!important;color:var(--obsidian)}
+.header,header,.delicate-menu,.care-delicate-menu,.care-tabs{background:var(--off-white);color:var(--obsidian);border-color:var(--nude)}
+.header .wordmark,.header .icon-btn,.header-actions,.header-icon,.logo,.logo small,.care-delicate-menu a,.delicate-menu a{color:var(--obsidian)}
+.neutral-wordmark{font-family:'Cormorant Garamond',Georgia,serif;font-weight:400;letter-spacing:.14em;font-size:34px;line-height:1.1;min-width:0}
+.neutral-wordmark small{font-family:Jost,Arial,sans-serif;font-size:9px;letter-spacing:.32em;margin-top:8px}
+#novidades,#mais-desejadas,#catalogo{background:var(--off-white)}
+.card,.card.mini,.c{background:var(--ivory);border-color:var(--nude)}
+.card .thumb,.c img{background:var(--ivory)}
+.card:hover{box-shadow:0 14px 32px rgba(16,16,16,.08)}
+.card .body{background:var(--ivory)}
+.card .buy,.btn:not(.light):not(.ghost),.submit{background:var(--obsidian);color:var(--off-white);border:1px solid var(--obsidian)}
+.card .buy:hover,.btn:not(.ghost):hover,.submit:hover{background:var(--nude);border-color:var(--obsidian);color:var(--obsidian)}
+.btn.ghost,.btn.light{background:transparent;color:var(--obsidian);border:1px solid var(--obsidian)}
+.btn.ghost:hover,.btn.light:hover{background:var(--ivory);color:var(--obsidian);border-color:var(--obsidian)}
+.fav,.rail-btn{background:var(--off-white);color:var(--obsidian);border-color:var(--nude)}
+.fav.on,.chip.on{background:var(--obsidian);color:var(--off-white);border-color:var(--obsidian)}
+.tag.new{background:var(--nude);color:var(--obsidian)}
+.mega,.drawer,.searchbox{background:var(--off-white);color:var(--obsidian);border-color:var(--nude)}
+.drawer-foot,.notice,.ci .ph,.care-hero,.care-material,.care-accordion,.step,.aviso{background:var(--ivory)}
+.care-tabs a.active,.care-tabs a:hover{background:var(--nude);color:var(--obsidian)}
+.care-contact{background:var(--obsidian);color:var(--off-white)}
+.care-contact h2,.care-contact p{color:var(--off-white)}
+.care-contact .btn{background:var(--off-white);color:var(--obsidian);border-color:var(--off-white)}
+.care-contact .btn.ghost{background:transparent;color:var(--off-white);border-color:var(--off-white)}
+.care-contact .btn:hover{background:var(--nude);color:var(--obsidian)}
+footer{background:var(--obsidian);color:var(--off-white)}
+footer .logo,footer .logo small,footer h5,footer a{color:var(--off-white)}
+footer p,.copy,.foot-bottom{color:rgba(253,252,248,.8)}
+footer a:hover{color:var(--nude)}
+footer .foot-bottom,footer .foot-line{border-color:rgba(253,252,248,.2)}
+.wa-float,.btn-wa{background:var(--obsidian);color:var(--off-white)}
+.wa-float:hover{background:var(--nude);color:var(--obsidian)}
+@media(max-width:600px){.neutral-wordmark{font-size:27px}.neutral-wordmark small{font-size:8px}}

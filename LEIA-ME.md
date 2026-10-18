@@ -1,4 +1,4 @@
-# Aurora Semijoias — loja virtual
+# H Maria por Karol — loja virtual
 
 Página inicial no estilo e-commerce (referência: montecarlo.com.br), com as
 **115 peças do catálogo 09/26** já cadastradas, com foto, preço e categoria.
@@ -10,6 +10,7 @@ Página inicial no estilo e-commerce (referência: montecarlo.com.br), com as
 | `produtos.js` | **as 115 peças** — nome, categoria, material, preço |
 | `assets/produtos/` | as fotos, uma por código |
 | `assets/banners/` | as duas artes do carrossel do topo |
+| `assets/categorias/` | fotos da vitrine "Encontre sua peça" (brincos, colares, pulseiras, aneis) |
 | `conferir-produtos.html` | sua conferência do PDF (não faz parte do site) |
 | `produtos.csv` / `produtos.json` | dados brutos extraídos do PDF |
 | `versao-anterior-linkbio.html` | a primeira versão, estilo link na bio |
@@ -21,19 +22,17 @@ Página inicial no estilo e-commerce (referência: montecarlo.com.br), com as
 - **Catálogo completo** (seção da home) com filtro por categoria + material e "carregar mais"
 - Busca ao vivo por nome, categoria, material ou **código da peça**
 - Favoritos com contador
-- **Sacola**: quantidade, subtotal, quanto falta para o frete grátis, valor no
-  Pix e botão "Finalizar no WhatsApp" com o pedido escrito item por item
+- **Sacola**: quantidade, subtotal, valor no Pix e botão "Finalizar no WhatsApp"
+  com o pedido escrito item por item
 - Menu lateral no celular, mega menu no computador, FAQ, newsletter
 
 ## Personalizar
 
-### 1. Dados da loja — bloco `CONFIG`, no final do `index.html`
+### 1. Dados da loja — arquivo `config.js` (vale para todas as páginas)
 ```js
 marca / marcaSub   nome no logo (parte grande e palavrinha de baixo)
-cnpj               aparece no rodapé
 whatsapp           DDI + DDD + número, só números. Ex: 5549999999999
 instagram / maps   links dos botões
-freteGratis        valor mínimo do frete grátis
 parcelas           nº de parcelas mostrado no card
 descontoPix        % de desconto no Pix
 porPagina          quantas peças carregam por vez no catálogo
@@ -54,11 +53,12 @@ Para **adicionar uma peça**: jogue a foto quadrada em `assets/produtos/` com o
 nome do código e copie uma linha dessas trocando os dados.
 
 ### 3. Banners do topo — `assets/banners/`
-As duas primeiras telas do carrossel são artes prontas (título, texto e botão já
+O carrossel tem só duas telas, as duas com a arte pronta (título, texto e botão já
 vêm na imagem). Para trocar, salve a arte nova por cima, com o mesmo nome:
-`hero-seu-estilo.jpg` e `hero-mais-que-semijoias.jpg`. Use imagens deitadas,
-por volta de 1672 × 941 px — o site corta um pouco de cima e de baixo em telas
-largas, e no celular mostra o lado esquerdo (deixe o texto sempre à esquerda).
+`hero-prazer-karol.jpg` (botão abre o WhatsApp) e `hero-cada-versao.jpg` (botão
+leva ao catálogo). Use imagens deitadas, por volta de 2170 × 725 px (3 × 1). No
+computador a arte aparece inteira; no celular o site mostra só o pedaço onde fica
+o texto: o lado direito na arte da Karol e o lado esquerdo na das joias.
 
 ### 4. Confira antes de publicar
 
@@ -66,11 +66,10 @@ Os nomes das peças foram escritos a partir das fotos — confira se batem com o
 nome que você usa. Os preços vieram do catálogo (valor cheio, sem desconto).
 
 **Textos que são promessa e precisam da sua confirmação:**
-- barra do topo e faixa de confiança: frete grátis acima de R$ 199, 3x sem
-  juros, troca grátis em 7 dias, 5% off no Pix
+- barra do topo e faixa de confiança: 3x sem juros, troca grátis em 7 dias,
+  5% off no Pix
 - "Garantia de 1 ano" e "Compre e retire" na seção de vantagens
 - os 3 depoimentos (são de exemplo — troque por reais)
-- CNPJ e horário de atendimento no rodapé
 
 ## Publicar (grátis)
 Arraste a pasta inteira em https://app.netlify.com/drop — sai um link na hora.
@@ -119,3 +118,13 @@ As duas páginas usam os mesmos nomes — mudou lá, mudou no site inteiro.
 
 O verde do WhatsApp (`#25D366`) ficou de fora de propósito: é a cor da marca do
 aplicativo e mudar atrapalha o reconhecimento do botão.
+
+## Prévia de publicação
+As alterações devem ser publicadas no mesmo endereço:
+https://h-maria-karol-previa.lucasjandrey.chatgpt.site/
+
+Projeto Sites: `appgprj_6abcdb8b5f1c8191aebdc23a871f6318`.
+O checkout de publicação fica em `.site-publish`; a configuração está em
+`.site-publish/.openai/hosting.json` e os arquivos publicados em `.site-publish/dist`.
+A prévia contém melhorias anteriores que ainda não estão nos HTML da raiz.
+Ao publicar, atualize o checkout e aplique as alterações solicitadas preservando essas melhorias.

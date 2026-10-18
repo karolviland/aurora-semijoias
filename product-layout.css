@@ -1,0 +1,76 @@
+/* Um padrão para todas as vitrines, categorias e resultados de busca. */
+:root{--product-columns:6;--product-gap:16px}
+[hidden]{display:none!important}
+.drawer-body{min-height:0}
+.container:has(.rail-wrap),.container:has(>.grid),.searchbox .container{
+  max-width:none;width:100%;padding-inline:clamp(20px,2.5vw,48px);
+}
+.grid,.results,.g,.related-products,.product-grid{
+  display:grid;grid-template-columns:repeat(var(--product-columns),minmax(0,1fr));
+  gap:var(--product-gap);align-items:stretch;
+}
+.rail,.rail.five,#rail-desired,#rail-novidades{
+  grid-auto-columns:calc((100% - (var(--product-columns) - 1)*var(--product-gap))/var(--product-columns));
+  gap:var(--product-gap);align-items:stretch;
+}
+.rail-wrap.five{padding-inline:0}
+.card,#rail-desired .card,#rail-novidades .card{min-width:0}
+.card .thumb,.card.mini .thumb,#rail-desired .thumb,#rail-novidades .thumb{
+  aspect-ratio:1 / 1;background:#F3F0E9;min-width:0;
+}
+.card .thumb img{
+  display:block;width:100%;height:100%;object-fit:contain;object-position:50% 50%;
+  padding:clamp(8px,4%,16px);
+}
+.card.mini .thumb img{padding:clamp(8px,4%,16px)}
+.card:hover .thumb img{transform:none}
+.ci .ph img,.res .ph img{object-fit:contain;object-position:center;padding:4px}
+.card .body,.card.mini .body,#rail-desired .body,#rail-novidades .body{padding:12px;min-width:0}
+.card h4,.card.mini h4,#rail-desired h4,#rail-novidades h4{
+  display:block;overflow:visible;-webkit-line-clamp:unset;
+  font-size:14px;line-height:1.45;min-height:2.9em;margin-bottom:10px;overflow-wrap:break-word;
+}
+.card .cat-label{min-height:2.9em;line-height:1.45;letter-spacing:.08em}
+.card .price-old{min-height:1.5em;line-height:1.5}
+.card .price-old:empty{visibility:hidden}
+.card .buy,.card.mini .buy,#rail-desired .buy,#rail-novidades .buy{
+  min-height:48px;padding:10px 8px;font-size:14px;letter-spacing:.03em;
+  white-space:normal;line-height:1.4;
+}
+.searchbox{padding-inline:0}
+.results{padding:4px 0 12px;max-height:70dvh}
+.results .product-link{display:block;height:100%}
+.results h4 a{display:block;color:inherit}
+.results a:focus-visible{outline:2px solid var(--wine);outline-offset:-2px}
+.results .no-res{grid-column:1/-1}
+.grid>.card,.results>.card,.rail>.card,.related-products>.card,.product-grid>.card{height:100%}
+.card.mini .price{margin-top:auto;font-size:16px;line-height:1.5}
+.card.mini .acts{margin-top:12px;gap:8px;flex-wrap:wrap}
+.card.mini .acts .buy{flex:1 1 100px}
+.card .price{overflow-wrap:anywhere}
+.card .parcel{font-size:12px;line-height:1.5;min-height:3em}
+.g>.c{min-width:0;height:100%}
+.g .i{flex:1}
+.g .i b{font-size:14px;line-height:1.45;min-height:2.9em;overflow-wrap:break-word}
+.g .i .p{margin-top:auto;font-size:16px}
+@media(max-width:1199px){:root{--product-columns:4}}
+@media(max-width:899px){:root{--product-columns:3}}
+@media(max-width:649px){
+  :root{--product-columns:2;--product-gap:12px}
+  .container:has(.rail-wrap),.container:has(>.grid),.searchbox .container{padding-inline:16px}
+  .card .body,.card.mini .body,#rail-desired .body,#rail-novidades .body{padding:10px}
+  .card .buy,.card.mini .buy,#rail-desired .buy,#rail-novidades .buy{letter-spacing:.02em}
+}
+@media(max-width:359px){:root{--product-columns:1}}
+
+/* Consulta de disponibilidade no estilo das etiquetas do catálogo. */
+.card .thumb .stock-check{position:absolute;top:10px;left:10px;z-index:2;display:inline-flex;align-items:center;justify-content:center;max-width:calc(100% - 58px);padding:7px 10px;border:0;border-radius:0;background:#E3DBCC;color:#101010;font-size:10px;font-weight:500;line-height:1.4;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;text-align:center;transition:background .2s}
+.card .thumb .stock-check:hover{background:#ddcfb9}
+.card .thumb .stock-check:focus-visible{outline:2px solid #161616;outline-offset:2px}
+.card .thumb:has(.stock-check) .tags{top:52px}
+@media(max-width:649px){.card .thumb .stock-check{top:7px;left:7px;max-width:calc(100% - 52px);padding:6px 8px;font-size:9px;letter-spacing:.06em}.card .thumb:has(.stock-check) .tags{top:48px;left:7px}}
+
+/* Identifica exclusivamente as peças do catálogo 16/10. */
+.card .thumb .catalog-new{position:absolute;top:10px;left:10px;z-index:3;display:inline-block;padding:5px 10px;background:#E3DBCC;color:#101010;border:0;border-radius:0;font-size:10px;font-weight:500;line-height:1.4;letter-spacing:.12em}
+.card .thumb:has(.stock-check) .catalog-new{top:52px}
+@media(max-width:649px){.card .thumb .catalog-new{top:7px;left:7px;padding:4px 8px;font-size:9px}.card .thumb:has(.stock-check) .catalog-new{top:48px}}

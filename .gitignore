@@ -1,0 +1,13 @@
+# Arquivos locais e temporários
+.browser-credit-test/
+.*-deploy-stage/
+.site-publish/
+tmp/
+verification/
+.infinitepay-calculator.html
+*-test.png
+site-*-deploy.tar.gz
+node_modules/
+.env
+.env.*
+!.env.example

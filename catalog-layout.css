@@ -1,0 +1,13 @@
+#catalogo{scroll-margin-top:140px;padding-bottom:60px}
+#catalogo .sec-head{text-align:center;margin:10px auto 24px}
+#catalog-section{font-size:12px;letter-spacing:.2em;color:var(--ink-2);text-transform:uppercase;margin-bottom:12px}
+#catalogo .sec-head h3{font-size:clamp(34px,4vw,52px);font-weight:400}
+#filtros-cat{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:30px}
+#filtros-cat .chip{background:transparent;border:1px solid var(--nude);color:var(--obsidian);padding:11px 20px}
+#filtros-cat .chip.on{background:var(--obsidian);color:var(--off-white);border-color:var(--obsidian)}
+#filtros-cat .chip:focus-visible{outline:2px solid var(--obsidian);outline-offset:3px}
+#contador{text-align:left;padding-top:20px;border-top:1px solid var(--nude);margin:0 0 24px}
+.catalog-empty{padding:36px 20px;text-align:center;color:var(--ink-2);background:var(--ivory)}
+.delicate-menu .nav-item>a.section-active:after{transform:scaleX(1)}
+.mega a.section-active,.mmenu a.section-active{font-weight:600;text-decoration:underline;text-underline-offset:5px}
+@media(max-width:600px){#catalogo{scroll-margin-top:90px}#catalogo .sec-head{margin-top:0}#filtros-cat{gap:8px}#filtros-cat .chip{padding:9px 14px;font-size:12px}}
